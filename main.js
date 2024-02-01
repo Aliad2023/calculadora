@@ -1,4 +1,4 @@
-// Creación variables (no cambian, entonces constantes)
+// Creación de constantes y variables 
 // Localización de los elementos en HTML mediante su Id
 const input = document.getElementById('pantalla');
 const resolver = document.getElementById('resolver');
@@ -19,7 +19,7 @@ const multiplicar = document.getElementById('btn_multiplicar');
 const dividir = document.getElementById('btn_dividir'); 
 let sumaTotal = 0;
 let cifras = [];
-let operacion = null; // crear la variable de operación
+let operacion = null; 
 
 //Eventos de click
 btn_uno.addEventListener('click', function(){
@@ -76,22 +76,22 @@ dividir.addEventListener('click', function(){
 })
 resolver.addEventListener('click', function(){
     cifras.push(Number(input.value));
-    // bucle
+    // bucle que recorre el array
     sumaTotal = cifras[0]; // asignar el primer valor a la suma total
     cifras.forEach(function(cifra, index){
-        if (index > 0) { // ignorar el primer valor
-            switch (operacion) { // usar un switch para realizar la operación adecuada
+        if (index > 0) { // Si index es mayor a 0 (es decir, no es el primer valor), se ejecutaran las operaciones
+            switch (operacion) { 
                 case "suma":
-                    sumaTotal += cifra;
+                    sumaTotal += cifra; // Sumamos cifra a sumaTotal
                     break;
                 case "resta":
-                    sumaTotal -= cifra;
+                    sumaTotal -= cifra; // restamos cifra a sumaTotal
                     break;
                 case "multiplicacion":
-                    sumaTotal *= cifra;
+                    sumaTotal *= cifra; // Multiplicamos sumaTotal por cifra
                     break;
                 case "division":
-                    sumaTotal /= cifra;
+                    sumaTotal /= cifra; // Dividimos sumaTotal por cifra
                     break;
             }
         }
