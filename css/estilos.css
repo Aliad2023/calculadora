@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #d2eab4;
+    background-image: url(/img/guillermo-ferla-Oze6U2m1oYU-unsplash.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 70%;
+    width: 25%;
+    border: 3px solid black;
+    box-shadow: 5px 5px ;
+    background-color: rgb(198, 195, 195);
+    grid-gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.pantalla{
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    font-size: 70px;
+    border: solid 2px black;
+    background-color: black;
+    color:whitesmoke;
+    font-weight: bold;
+    padding: 10px;
+    box-sizing:border-box ;
+    height: 100px;
+    text-align: right;
+}
+
+button{
+    cursor: pointer;
+    border: solid 2px black;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+.resolver{
+        background-color: orangered;
+        color:white;
+}
+
+.btn_sumar, .btn_restar, .btn_multiplicar, .btn_dividir{
+    background-color: rgb(29, 57, 212);
+    color: white;
+    
+}
+.casio{
+    grid-column: 1/-1;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25px;
+}
+
+/* button:hover {
+    background-color: #f5f5f5;
+}
+
+button:active {
+    background-color: #e6e6e6;
+} */
